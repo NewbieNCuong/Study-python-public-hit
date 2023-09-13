@@ -22,10 +22,10 @@ restt = 0
 reshh = 0
 i = 0
 while(i < len(b) - 1):
-    for j in range(0, len(b)):
-        if(check1(b[i], b[j] == True or check1(b[j], b[i]) == True)):
+    for j in range(i + 1, len(b)):
+        if(check1(b[i], b[j]) == True and check1(b[j], b[i]) == True):
             restt += 1
-        if(check2(b[i], b[j]) == True or check2(b[j], b[i]) == True):
+        if(check2(b[i], b[j]) == True and check2(b[j], b[i]) == True):
             reshh += 1
     i += 1
 print(restt, end = " ")
